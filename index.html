@@ -18,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
-	<link rel="stylesheet" href="ionicons.min.css">
 	<link rel="stylesheet" href="css/flaticon.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -229,48 +228,58 @@
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
-                        <img src="images/work-1.jpg" alt="">
+                        <img id="work1" src="images/work-1.jpg" alt="" onclick="previewImage('work1');">
                         <div class="text">Admission Consultant</div>
                         <p>Android Application for admission consultation</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/work-2.jpg" alt="">
+                        <img id="work2" src="images/work-2.jpg" alt="" onclick="previewImage('work2');">
                         <div class="text">Patient Info Bank</div>
                         <p>Patient prescription holder Android application</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/work-6.jpg" alt="">
+                        <img id="work6" src="images/work-6.jpg" alt="" onclick="previewImage('work6');">
                         <div class="text">Prizer Kuwait</div>
                         <p>Application for products price tracking and marketing</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/work-3.jpg" alt="">
+                        <img id="work3" src="images/work-3.jpg" alt="" onclick="previewImage('work3');">
                         <div class="text">FRS Buddy-V1</div>
                         <p>Intelligent fire fighter robot to extinguish fire of critical area</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/work-4.jpg" alt="">
+                        <img id="work4" src="images/work-4.jpg" alt="" onclick="previewImage('work4');">
                         <div class="text">Rentinget</div>
                         <p>Android application for home rent management</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/work-5.jpg" alt="">
+                        <img id="work5" src="images/work-5.jpg" alt="" onclick="previewImage('work5');">
                         <div class="text">Tradinget</div>
                         <p>Business management Android application</p>
                     </div>
                 </div>
             </div>
         </div>
+        
+
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+      </div>
+                  <!-- End Image Zoom HTML -->
+                 
+                  </div>
+              </div>
+          </div>
     </section>
 
 
@@ -406,5 +415,34 @@
     </footer>
 
     <script src="script.js"></script>
+    
+<script>
+    function previewImage(id) {
+            
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById(id);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        
+        modal.style.display = "block";
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            // captionText.innerHTML = img.alt;
+        
+        // When the user clicks on <span> (x), close the modal
+        modal.onclick = function() {
+            img01.className += " out";
+            setTimeout(function() {
+            modal.style.display = "none";
+            img01.className = "modal-content";
+            }, 400);
+            
+        }    
+            
+    }
+    </script>
 </body>
 </html>
