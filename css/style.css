@@ -506,7 +506,7 @@ section .title::after{
 .projects .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.projects .carousel .card .text{
+.projects .carousel .card a .text {
     font-size: 20px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
@@ -514,7 +514,7 @@ section .title::after{
     color: white;
 }
 
-.projects .carousel .card p{
+.projects .carousel .card a p{
     font-family: 'Poppins', sans-serif;
     color: white;
 }
