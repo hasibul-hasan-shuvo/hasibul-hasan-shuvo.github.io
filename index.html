@@ -427,11 +427,15 @@
                     <div class="text">Message me</div>
 					<script type="text/javascript">var submitted = false;</script>
 					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-						onload="if(submitted) {send_contact();}"></iframe>
+						onload="if(submitted) {
+                            send_contact();
+                        }">
+                    </iframe>
                     <form 
                     action="https://docs.google.com/forms/d/e/1FAIpQLSfHbSndIEj39b00en0_JtWsk6JUFJAQOULIZ-18-kvsQxWEig/formResponse"
                     target="hidden_iframe" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-response="%.@.[]]"
-                    data-first-entry="0" data-last-entry="4" data-is-first-page="true" onsubmit="submitted=true;">
+                    data-first-entry="0" data-last-entry="4" data-is-first-page="true" onsubmit="
+                    Swal.showLoading();submitted=true;">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" id="name" name="entry.172527413" placeholder="Name" required>
