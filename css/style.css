@@ -253,7 +253,7 @@ section .title::after{
     background: none;
 }
 /* Education section styling  */
-.education, .teams{
+.education, .teams, .meeting{
     color:#fff;
     background: #111;
 }
